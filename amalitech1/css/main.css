@@ -1,6 +1,3 @@
-*{
-    box-sizing: border-box;
-}
 .navbar-con{
     width: 100%;
     height: 100%;
@@ -191,4 +188,13 @@ padding-top: 130px;
     position: absolute;
     right: 187px;
     color: #D9B8FF;
+}
+
+/* === Tablet === */
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    .group-chat{
+        width: 50%;
+        grid-template-columns: 1fr 1fr ;
+        grid-gap: 20px;
+    }
 }
