@@ -1,3 +1,6 @@
+body{
+    box-sizing: border-box;
+}
 .navbar-con{
     width: 100%;
     height: 100%;
@@ -75,7 +78,7 @@
 }
 .vtx{
     position: absolute;
-    bottom: 342px;
+    bottom: 313px;
     left: 680px;
     color: #8FE3F9;
 }
@@ -100,7 +103,7 @@ padding-top: 130px;
 }
 
 .team{
-    padding: 60px 70px;
+    padding: 50px 0px;
     align-items: center;
     width:100%;
     display: grid;
@@ -190,11 +193,80 @@ padding-top: 130px;
     color: #D9B8FF;
 }
 
-/* === Tablet === */
-@media only screen and (min-width: 481px) and (max-width: 768px){
-    .group-chat{
-        width: 50%;
-        grid-template-columns: 1fr 1fr ;
-        grid-gap: 20px;
-    }
+/* === Mobile === */
+
+@media only screen and (min-width: 320px) and (max-width: 640px){
+    body{
+        align-items: center ; 
+        justify-content: center; 
 }
+    .grp{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .group-chat{
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .propic1{
+        width: 100%;
+        height: 100%;
+    }
+    .propic2{
+        width: 100%;
+        height: 100%;
+    }
+    .vtx{
+        top: 773px;
+        left: 180px;
+    }
+    .team{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .textcon{
+        width: 80%;
+    }
+    .majtext{
+        font-size: 40px;
+        line-height: 44px;
+        margin: 0;
+    }
+    .minjxt{
+        font-size: 16px;
+    }
+    .butt{
+        display: block;
+        align-content: center;
+        margin-left: 170px;
+    }
+    .dload{
+        margin-right: 0px;
+    }
+    .what{
+    margin-top: 10px;
+    margin-left: 25px;
+    }
+    .mincon{
+        grid-template-columns: 1fr;
+
+    }
+    .right{
+        font-size: 32px;
+        text-align: center;
+        line-height: 36px;
+    }
+    .midd{
+        text-align: center;
+    }
+    .vtxt{
+        right: 100px;
+    }
+    
+}
+
+/* === Tablet === */
