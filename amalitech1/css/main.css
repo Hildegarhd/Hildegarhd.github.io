@@ -1,8 +1,4 @@
-body{
-    box-sizing: border-box;
-    display: block;
-    margin: 8px;
-} 
+
 .navbar-con{
     width: 100%;
     height: 100%;
@@ -12,10 +8,13 @@ body{
 
 }
 .navbar{
-    margin-left: 80px;
     padding-top: 50px;
     height: 28px;
     width: 119px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
 }
 .group-chat{
     display: grid;
@@ -30,19 +29,23 @@ body{
 }
 .textcon{
     grid-area: mid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .majtxt{
-    width: 445px;
+    margin-bottom: 0;
+    max-width: 445px;
     font-size: 64px;
     line-height: 64px;
     text-align: center;
     color: #28283D;
     font-weight: bold;
-    padding-left: 50px;
 }
 .minjxt{
     text-align: center;
-    width: 540px;
+    max-width: 540px;
     font-size: 18px;
     line-height: 26px;
     font-weight: lighter;
@@ -73,8 +76,8 @@ body{
 }
 .vtx{
     position: absolute;
-    bottom: 313px;
-    left: 680px;
+    bottom: 430px;
+    left: 765px;
     color: #8FE3F9;
 }
 .what{
@@ -116,8 +119,9 @@ padding-top: 130px;
     text-align: center;
 }
 .txt1{
+    text-transform: uppercase;
     color: #4D96A9;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 26px;
 }
 .txt2{
@@ -183,7 +187,7 @@ padding-top: 130px;
 }
 .vtxt{
     position: absolute;
-    right: 182px;
+    right: 208px;
     color: #D9B8FF;
 }
 .path1{
@@ -195,72 +199,6 @@ padding-top: 130px;
     bottom: -20px;
 } 
 
-/* === Mobile === */
-
-@media only screen and (min-width: 320px) and (max-width: 640px){
-    body{
-        align-items: center ; 
-        justify-content: center; 
-}
-    /* .grp{
-        /* width: 90%;
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-    } */
-    .group-chat{
-        grid-template-areas: 
-            "left right"
-            "mid mid";
-    }
-    .vtx{
-        top: 773px;
-        left: 180px;
-    }
-    .team{
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 10px;
-    }
-    .textcon{
-        width: 80%;
-    }
-    .majtext{
-        font-size: 40px;
-        line-height: 44px;
-        margin: 0;
-    }
-    .minjxt{
-        font-size: 16px;
-    }
-    .butt{
-        display: block;
-        align-content: center;
-        margin-left: 170px;
-    }
-    .dload{
-        margin-right: 0px;
-    }
-    .what{
-    margin-top: 10px;
-    margin-left: 25px;
-    }
-    .mincon{
-        grid-template-columns: 1fr;
-
-    }
-    .right{
-        font-size: 32px;
-        text-align: center;
-        line-height: 36px;
-    }
-    .midd{
-        text-align: center;
-    }
-    .vtxt{
-        right: 100px;
-    }
-    
-}
 
 /* === Tablet === */
 @media only screen and (min-width: 768px) and (max-width: 947px){
@@ -268,7 +206,9 @@ padding-top: 130px;
         margin: 0;
         padding: 0;  
     }
-
+    .txt1{
+        font-size: 16px;
+    }
     .group-chat{
         grid-template-areas: 
             "left right"
@@ -305,3 +245,86 @@ padding-top: 130px;
         right: 328px;
     }
 }
+
+
+/* === Mobile === */
+
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    body{
+        align-items: center ; 
+        justify-content: center; 
+} 
+     .grp{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    } 
+
+    .group-chat{
+        grid-template-areas: 
+            "left right"
+            "mid mid";
+    }
+    .vtx{
+        top: 500px;
+        left: 185px;
+    }
+    .team{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .textcon{
+        width: 100vw;
+         /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  */
+    }
+    .majtxt{
+        width: 100%;
+        font-size: 40px;
+        line-height: 44px;
+        /* margin: 0;  */
+    }
+    .minjxt{
+        font-size: 16px;
+    }
+    .txt1{
+        font-size: 14px;
+    }
+    .txt2{
+        font-size: 32px;
+    }
+
+    .butt{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .dload{
+        margin-right: 0px;
+    }
+    .what{
+    margin-top: 10px;
+    }
+    .mincon{
+        grid-template-columns: 1fr;
+
+    }
+    .right{
+        font-size: 32px;
+        text-align: center;
+        line-height: 36px;
+    }
+    .midd{
+        text-align: center;
+    }
+    .vtxt{
+        right: 105px;
+    }
+    
+}
+
